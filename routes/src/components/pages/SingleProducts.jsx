@@ -6,6 +6,9 @@ export default function SingleProducts() {
     console.log(urlId);
     const newProducts = techStack.filter(val=>val.id == urlId)
     console.log(newProducts);
+    if(! newProducts.length > 0){
+        return <p> no products found</p>
+    }
     
     
     return (
@@ -13,7 +16,8 @@ export default function SingleProducts() {
         <h1>{urlId}</h1>
         <h1>Product </h1>
         <div className="flex items-center gap-x-4 flex-wrap justify-center " >
-            {newProducts.map((value,id)=>(
+            {newProducts &&
+             newProducts.map((value,id)=>(
                 <div className="grid justify-center justify-items-center border rounded-sm p-4 items-center " key={id}>
                     <h1>{value.name}</h1>
 

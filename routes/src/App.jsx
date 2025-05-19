@@ -19,10 +19,9 @@ export default function App() {
       <Route path="settings" element={<Settings/>}/>
       <Route path="login" element={<Login/>}/>
       <Route path="help" element={<Help/>}/>
-      <Route path="done" element={<h1>Done link</h1>}/>
 
       <Route path="products" element={<TechStack/>}/>
-      <Route path="done/:id" element={<SingleProducts/>} />
+      <Route path="products/:id" element={<SingleProducts/>} />
 
     </Routes>
     

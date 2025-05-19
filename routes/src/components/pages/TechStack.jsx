@@ -14,7 +14,7 @@ export default function TechStack() {
 
                     <img className='h-40 w-40 object-cover' src={value.image} alt={value.name} />
                     <p className='text-sm w-60 text-justify'>{value.description}</p>
-                    <Link to={`/done/${value.id}`} className='float-right py-2 px-4 bg-orange-600'>See more</Link>
+                    <Link to={`/products/${value.id}`} className='float-right py-2 px-4 bg-orange-600'>See more</Link>
                 </div>
             ))}
         </div>
