@@ -2,7 +2,7 @@ import { Link, useParams } from "react-router-dom"
 import techStack from "../datas/techStack.data";
 
 export default function SingleProducts() {
-    const  {id : urlId} = useParams()
+    const  {index : urlId} = useParams()
     console.log(urlId);
     const newProducts = techStack.filter(val=>val.id == urlId)
     console.log(newProducts);
@@ -10,13 +10,12 @@ export default function SingleProducts() {
         return <p> no products found</p>
     }
     
-    
     return (
         <>
         <h1>{urlId}</h1>
         <h1>Product </h1>
         <div className="flex items-center gap-x-4 flex-wrap justify-center " >
-            {newProducts &&
+            {
              newProducts.map((value,id)=>(
                 <div className="grid justify-center justify-items-center border rounded-sm p-4 items-center " key={id}>
                     <h1>{value.name}</h1>

@@ -21,7 +21,7 @@ export default function App() {
       <Route path="help" element={<Help/>}/>
 
       <Route path="products" element={<TechStack/>}/>
-      <Route path="products/:id" element={<SingleProducts/>} />
+      <Route path="products/:index" element={<SingleProducts/>} />
 
     </Routes>
     
