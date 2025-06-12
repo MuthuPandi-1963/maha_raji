@@ -1,11 +1,11 @@
 import {Router} from 'express'
-import getProducts from '../controllers/getProducts.js'
-import createProducts from '../controllers/createProducts.js'
+import getTasks from '../controllers/getTasks.js'
+import createTasks from '../controllers/createTask.js'
 
 const productRoutes = Router()
 
-productRoutes.get("",getProducts)
-productRoutes.post("",createProducts)
+productRoutes.get("",getTasks)
+productRoutes.post("",createTasks)
 
 
 export default productRoutes
