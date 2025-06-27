@@ -31,7 +31,7 @@ const updateTask = async (req,res)=>{
         await Task.save();
     return res.status(200).json({
       success: true,
-      message: "task fetched successfully",
+      message: "task updated successfully",
       data: Task,
     });
   } catch (err) {

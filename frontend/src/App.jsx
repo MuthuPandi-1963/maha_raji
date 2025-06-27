@@ -6,7 +6,7 @@ export default function App() {
   const [load,setLoad] = useState(false)
   return (
     <>
-    <ShowTask load={load}/>
+    <ShowTask load={load} setLoad={setLoad}/>
     <Form setLoad={setLoad}/>
     </>
   )
